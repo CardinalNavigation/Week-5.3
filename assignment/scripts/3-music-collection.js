@@ -1,5 +1,7 @@
 console.log('***** Music Collection *****')
-let collection = []
+
+//adding our array to start and logging it to make sure it works
+const collection = []
 
 console.log(collection);
 
@@ -13,10 +15,24 @@ function addToCollections(title, artist, yearPublished) {
         Released: yearPublished
     }
     collection.push(newAddtion);
-    return newAddtion;
+    return console.log(newAddtion);
 }
+//I am doing a console log to make sure the function works as intended. 
 
 console.log(addToCollections("Dare to Be Stupid", "Weird Al Yankovick", "1985"))
-console.log(collection)
 
-//creating new album with title, artist, and yearPublished
+//creating 6 new album with title, artist, and yearPublished. 
+
+addToCollections("Let Go", "Avril Lavigne", "2002");
+
+addToCollections("Weezer", "Weezer", "1994");
+
+addToCollections("Running With Scissors", "Weird Al Yankovick", "1999");
+
+addToCollections("No Need to Argue", "Cranberries", "1994");
+
+addToCollections("Californication", "Red Hot Chili Peppers", "1999");
+
+addToCollections("Green Album", "Weezer", "2001");
+
+console.log(collection);
