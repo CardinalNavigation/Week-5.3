@@ -10,9 +10,9 @@ console.log(collection);
 //it also needs to push it into the current collection array
 function addToCollections(title, artist, yearPublished) {
     let newAddtion = {
-        Title: title,
-        Artist: artist,
-        Released: yearPublished
+        title: title,
+        artist: artist,
+        yearPublished: yearPublished
     }
     collection.push(newAddtion);
     return console.log(newAddtion);
@@ -36,3 +36,15 @@ addToCollections("Californication", "Red Hot Chili Peppers", "1999");
 addToCollections("Green Album", "Weezer", "2001");
 
 console.log(collection);
+
+//Adding a showCollection function, parameters are an array, should console log the number of items in the array. 
+//`TITLE by ARTIST, published in YEAR`.
+
+function showCollection(array) {
+    console.log("Collected Works:", collection.length)
+    for (let album of array) {
+        console.log(album.title, "by", album.artist, "published in,", album.yearPublished);
+    }
+}
+
+showCollection(collection);
