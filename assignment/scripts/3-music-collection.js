@@ -9,13 +9,13 @@ console.log(collection);
 //this needs to create a new object with the parameters
 //it also needs to push it into the current collection array
 function addToCollections(title, artist, yearPublished) {
-    let newAddtion = {
+    let album = {
         title: title,
         artist: artist,
         yearPublished: yearPublished
     }
-    collection.push(newAddtion);
-    return console.log(newAddtion);
+    collection.push(album);
+    return console.log(album);
 }
 //I am doing a console log to make sure the function works as intended. 
 
@@ -48,3 +48,26 @@ function showCollection(array) {
 }
 
 showCollection(collection);
+
+// Creating Function to find by artist.
+// I first need to make a loop that will pull all of the artist names out 
+console.log(collection.artist)
+
+function findByArtist(artistInput) {
+    console.log("Searching Database for :", artistInput);
+    let artistList = []
+    for (let i = 0; i < collection.length; i++) {
+        if (collection[i].artist == artistInput) {
+            artistList.push(collection[i]);
+
+        }
+    }
+    console.log(artistList)
+}
+
+
+findByArtist("Weezer");
+findByArtist("Weird Al Yankovick");
+
+
+
