@@ -50,7 +50,8 @@ function showCollection(array) {
 showCollection(collection);
 
 // Creating Function to find by artist.
-// I first need to make a loop that will pull all of the artist names out 
+// I first need to make a loop that will pull all of the artist names out , then something to push those
+// albums into the array
 console.log(collection.artist)
 
 function findByArtist(artistInput) {
@@ -70,3 +71,25 @@ findByArtist("Weird Al Yankovick");
 findByArtist("Madonna")
 
 
+//working on stretch goals. This search has two criteria. If both critera match anything in the 
+// collection array, it will add it to our searchList array. 
+// If it doesnt, what i am trying to do is return a blank array, then return the whole collection list
+
+function search(artistInput, year) {
+    console.log("Searching Database for :", artistInput);
+    for (let i = 0; i < collection.length; i++) {
+        let searchList = []
+        if (collection[i].artist === artistInput && collection[i].yearPublished === year) {
+            searchList.push(collection[i]);
+            console.log("Record Found:", searchList);
+        }
+        else if (collection[i].artist !== artistInput || collection[i].yearPublished !== year) {
+            console.log("No Record Found", searchList);
+            return console.log(collection)
+        }
+    }
+}
+
+search("Ray Charles", "1957");
+//search("Avril Lavigne", "2002");
+//search();
