@@ -65,9 +65,8 @@ function findByArtist(artistInput) {
     console.log(artistList)
 }
 
-
 findByArtist("Weezer");
 findByArtist("Weird Al Yankovick");
-
+findByArtist("Madonna")
 
 
