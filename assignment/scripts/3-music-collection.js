@@ -82,14 +82,19 @@ function search(artistInput, year) {
         if (collection[i].artist === artistInput && collection[i].yearPublished === year) {
             searchList.push(collection[i]);
             console.log("Record Found:", searchList);
+            return console.log(searchList)
         }
         else if (collection[i].artist !== artistInput || collection[i].yearPublished !== year) {
             console.log("No Record Found", searchList);
-            return console.log(collection)
+            console.log(searchList);
+        } else {
+            return console.log(collection);
         }
+
     }
+
 }
 
-search("Ray Charles", "1957");
+//search("Ray Charles", "1957");
 //search("Avril Lavigne", "2002");
-//search();
+//search("Weird Al Yankovick");
